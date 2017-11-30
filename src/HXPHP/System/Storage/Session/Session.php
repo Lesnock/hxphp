@@ -68,6 +68,8 @@ class Session implements \HXPHP\System\Storage\StorageInterface
 
         if ($this->get($name . '_created_at') + $this->get($name . '_timeout') < time())
             return true;
+        else
+            return false;
     }
 
     /**
